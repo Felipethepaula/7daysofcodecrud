@@ -5,7 +5,6 @@ let dataNovo = document.getElementById('birth-date-novo')
 let button = document.getElementById('salvar')
 let $form = document.querySelector('.form')
 let $edit = document.querySelector('.edit')
-const $popup = document.querySelector('.edita')  
 const $excluir = document.querySelector('.excluir-div')  
 
 let pessoas = {
@@ -45,16 +44,10 @@ let pessoas = {
     },
 
     popEditaDados(id){
-        let $edita = document.querySelector('#alterar')
+        let $edta = document.querySelector('#alterar')
         let $fechar = document.querySelector('#fechar')
 
         
-        if($edita){
-            $edita.addEventListener('click', function dados(infosDoEvento) {
-                infosDoEvento.preventDefault()
-                pessoas.editaDados({nome:nomeNovo.value, aniversario:dataNovo.value, id})
-            })
-        }
 
         if($fechar){
             $fechar.addEventListener('click', function dados(infosDoEvento) {
@@ -75,10 +68,6 @@ let pessoas = {
         atualizado.aniversario = dados.aniversario
         atualizado.id = Number(dados.id) + 1
         $popup.classList.add('remove')
-        
-        let id = dados.id
-        let classe = document.querySelector(`li[class='${id}']`)
-        classe.classList.add('remover')
 
         pessoas.adicionaDados({nome:atualizado.nome, aniversario:atualizado.aniversario, id:atualizado.id})
 
@@ -117,7 +106,7 @@ document.querySelector(".aniversarios").addEventListener('click', function(infos
     if(dados){
         let informacoes = pessoa.parentNode.getAttribute('data-id')
         pessoas.popEditaDados(informacoes)
-        $popup.classList.remove('remove')
+       
     }
 
 })

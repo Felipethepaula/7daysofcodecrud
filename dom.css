@@ -17,15 +17,15 @@ body{
 
 .container{
     position:absolute;
-    top:50%;
-    left:50%;
+    top:10%;
+    left:10%;
     transform:translate(-50%, -50%);
 
     width:30rem;
     height:20rem;
     border-radius: 10px;
     padding:1.5rem;
-    background-color:white;
+    background-color:rgb(160, 108, 108);
     border: 1.5px solid black
 }
 
@@ -48,7 +48,7 @@ body{
     
 }
 
-.container label{
+.container {
     font-size:.7rem
 }
 
@@ -58,7 +58,7 @@ body{
     width:2.5rem;
     height:1.5rem;
     padding:.3rem;
-    background-color: #8fbc8f
+    background-color: #39b839
 }
 
 button{
@@ -71,15 +71,6 @@ button:hover{
     filter:brightness(.9);
 
 }
-
-.content{
-    margin-top:1rem;
-    height:11rem;
-    overflow-y:scroll;
-    overflow-x:hidden
-
-}
-
 .content li{
     margin-bottom:.5rem;
 }
